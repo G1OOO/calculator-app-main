@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap');
+
+body {
+    background-color: #3b4664;
+    color: #fff;
+    font-family: 'Spartan', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.calculator-container {
+    width: 500px;
+    margin: 0 auto;
+}
+
+.calculator-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.calc-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+
+.theme-label {
+    font-size: 0.8rem;
+    margin-right: 8px;
+    letter-spacing: 1px;
+}
+
+.theme-toggle {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.8rem;
+}
+
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: #222c43;
+    border-radius: 12px;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 12px;
+    width: 12px;
+    left: 4px;
+    bottom: 3px;
+    background-color: #d03f2f;
+    border-radius: 50%;
+    transition: .4s;
+}
+
+input:checked + .slider:before {
+    left: 24px;
+}
+
+.screen {
+    background-color: #181f33;
+    color: #fff;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: right;
+    padding: 32px 24px;
+    border-radius: 10px;
+    margin-bottom: 24px;
+    min-height: 60px;
+    letter-spacing: 2px;
+    box-sizing: border-box;
+}
+
+.buttons {
+    background-color: #242d44;
+    padding: 32px 24px;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    box-sizing: border-box;
+}
+
+.button {
+    background-color: #eae3dc;
+    color: #3b4664;
+    border: none;
+    border-radius: 8px;
+    font-size: 2rem;
+    font-family: inherit;
+    font-weight: bold;
+    padding: 16px 0;
+    cursor: pointer;
+    box-shadow: 0 4px #b4a597;
+    transition: background 0.2s, color 0.2s;
+}
+
+.button:active {
+    transform: scale(0.97);
+}
+
+.button:hover {
+    background-color: #fff;
+}
+
+.button.operator {
+    background-color: #eae3dc;
+    color: #3b4664;
+}
+
+.button.del {
+    background-color: #647198;
+    color: #fff;
+    box-shadow: 0 4px #414e73;
+    font-size: 1.2rem;
+}
+
+.button.reset {
+    grid-column: span 2;
+    background-color: #647198;
+    color: #fff;
+    box-shadow: 0 4px #414e73;
+    font-size: 1.2rem;
+}
+
+.button.equal {
+    grid-column: span 2;
+    background-color: #d03f2f;
+    color: #fff;
+    box-shadow: 0 4px #93261a;
+    font-size: 1.2rem;
+}
+.num{
+    width: 3em;
+}
